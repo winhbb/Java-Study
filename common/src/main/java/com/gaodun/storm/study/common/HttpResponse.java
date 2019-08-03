@@ -7,22 +7,28 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-public class Status<T> implements Serializable {
+public class HttpResponse<T> implements Serializable {
     private int status;
     private String message;
     private T result;
 
-    public Status() {
+    public HttpResponse() {
     }
 
-    public Status(int status, String message) {
+    public HttpResponse(int status, String message) {
         this.status = status;
         this.message = message;
     }
 
-    public Status(int status, String message, T result) {
+    public HttpResponse(int status, String message, T result) {
         this.status = status;
         this.message = message;
+        this.result = result;
+    }
+
+    public HttpResponse(StatusCode statusCode, T result) {
+        this.status = statusCode.code;
+        this.message = statusCode.message;
         this.result = result;
     }
 }

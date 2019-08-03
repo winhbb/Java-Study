@@ -3,7 +3,6 @@ package com.gaodun.storm.study.common.request;
 import com.gaodun.storm.study.common.Exceptions;
 import com.gaodun.storm.study.common.GlearningStatus;
 import com.gaodun.storm.study.common.ServiceException;
-import com.gaodun.storm.study.common.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
